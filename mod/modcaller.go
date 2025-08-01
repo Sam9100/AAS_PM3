@@ -68,5 +68,7 @@ func Caller(Profile itmodel.Profile, Modulename string, Pesan itmodel.IteungMess
 		reply = posint.GetProhibitedItems(Pesan, db)
 	}
 
+	
+
 	return
 }

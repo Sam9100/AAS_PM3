@@ -16,6 +16,16 @@ func URL(w http.ResponseWriter, r *http.Request) {
 
 	var method, path string = r.Method, r.URL.Path
 	switch {
+
+	//AAS
+	//Register
+	case method == "POST" && path == "/aas/register":
+		controller.RegisterHandler(w, r)
+	//Login
+	case method == "POST" && path == "/aas/login":
+		controller.GetUser(w, r)
+	
+
 	case method == "GET" && path == "/":
 		controller.GetHome(w, r)
 	//chat bot inbox
